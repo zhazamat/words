@@ -11,9 +11,9 @@ public class Main {
         Map<Character,Long>values;
         char[] w=word1.toCharArray();
         for(int i=0;i<word1.length();i++){
-            if(w[i]!=' '&&w[i]!=','&&w[i]!='.'&&w[i]!='!'&&w[i]!=')'&&w[i]!='('&&w[i]!='?'&&w[i]!=';'&&w[i]!='-'&&w[i]!='’') {
+           // if(w[i]!=' '&&w[i]!=','&&w[i]!='.'&&w[i]!='!'&&w[i]!=')'&&w[i]!='('&&w[i]!='?'&&w[i]!=';'&&w[i]!='-'&&w[i]!='’') {
                characters.put(i,w[i]);
-            }
+           // }
         }
         values=characters.values().stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
         System.out.println("Values Count : "+values);}
